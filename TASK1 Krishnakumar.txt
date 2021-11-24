@@ -1,0 +1,580 @@
+PYTHON	
+
+
+Just like we communicate with each other, we use a Programming language to communicate with the computer.
+
+Programming is a way to instruct the computer to perform various tasks.
+
+What is Python?
+Python is a simple and easy-to-understand language that feels like reading simple English. 
+This Pseudo code nature of Python makes it easy to learn and understandable for beginners
+
+print(“Hello World”)   
+Execute this file (.py file) by typing python hello.py, and you will see Hello World printed on the screen.
+
+Modules
+A module is a file containing code written by somebody else (usually) which can be imported and used in our programs.
+
+Pip
+Pip is a package manager for python. You can use pip to install a module on your system.
+
+E.g., pip install flask (It will install flask module in your system)
+
+Types of modules
+There are two types of modules in Python:
+
+Built-in modules – Pre-installed in Python
+External modules – Need to install using pip
+Some examples of built-in modules are os, abc, etc.
+
+Some examples of external modules are TensorFlow, flask, etc.
+
+Using Python as a Calculator
+
+We can use python as a calculator by typing “python” + TO DO on the terminal. [It opens REPL or read evaluation print loop]
+
+
+Comments
+Comments are used to write something which the programmer does not want to execute.
+
+Comments can be used to mark the author's name, date, etc.
+
+Types of Comments:
+
+There are two types of comments in python,
+
+Single line comments – Written using # (pound/hash symbol)
+Multi-line comments – Written using ‘’’ Comment ‘’’ or “”” Comment “”
+
+
+Variables and Data Types
+A variable is a name given to a memory location in a program. For example
+
+a=30
+
+b=”Harry”
+
+c=71.22
+Variable – Container to store a value
+
+Keywords – Reserved words in Python
+
+Identifiers – class/function/variable name
+
+Data Types:
+Primarily there are the following data types in Python:
+
+Integers
+Floating point numbers
+Strings
+Booleans
+None
+Python is a fantastic language that automatically identifies the type of data for us.
+
+a = 71                                    #Identifies a as class<int>
+
+b = 88.44                              #Identifies b as class<float>
+
+name = “Harry”                  #Identifies name as class<Str>
+Rules for defining a variable name: (Also applicable to other identifiers)
+
+A variable name can contain alphabets, digits, and underscore.
+A variable name can only start with an alphabet and underscore.
+A variable can’t start with a digit.
+No white space is allowed to be used inside a variable name.
+Examples of few valid variable names,
+
+Harry, harry, one8, _akki, aakash, harry_bro, etc.
+
+
+Operators in Python
+The following are some common operators in Python:
+
+Arithmetic Operators (+, -, *, /, etc.)
+Assignment Operators (=, +=, -=, etc.)
+Comparison Operators (==, >=, <=, >, <, !=, etc.)
+Logical Operators (and, or, not)
+type() function and Typecasting
+
+type function is used to find the data type of a given variable in Python.
+
+a = 31
+
+type(a)                      #class<int>
+
+b = “31”
+
+type(b)                      #class<str>
+A number can be converted into a string and vice versa (if possible)
+
+There are many functions to convert one data type into another.
+
+Str(31)           # ”31” Integer to string conversion
+
+int(“32”)       # 32 String to int conversion
+
+float(32)       #32.0 Integer to float conversion
+… and so on
+
+Here “31” is a string literal, and 31 is a numeric literal.
+
+input() function
+
+This function allows the user to take input from the keyboard as a string.
+
+a = input(“Enter name”)               #if a is “harry”, the user entered harry
+Note: The output of the input function is always a string even if the number is entered by the user.
+
+Suppose if a user enters 34, then this 34 will automatically convert to “34” string literal.
+
+*problem
+Write a Python program to find the average of two numbers entered by the user.
+Write a Python program to calculate the square of a number entered by the user.
+
+Chapter 3 – Strings
+The string is a data type in Python.
+
+A string is a sequence of characters enclosed in quotes.
+
+We can primarily write a string in three ways:
+
+Single quoted strings : a = ‘harry’
+Double quoted strings : b = “harry”
+Triple quoted strings : c = ‘’’ harry ‘’’
+String Slicing:
+A string in Python can be sliced for getting a part of the string.
+
+Consider the following string:
+
+
+
+The index in a string starts from 0 to (length-1) in Python. To slice a string, we use the following syntax:
+
+
+
+Negative Indices: Negative indices can also be used as shown in the figure above. -1 corresponds to the (length-1) index, -2 to (length-2).
+
+Slicing with skip value
+
+We can provide a skip value as a part of our slice like this:
+
+word = “amazing”
+
+word[1:6:2]           # It will return ’mzn’
+
+Other advanced slicing techniques
+
+word = ‘amazing’
+
+word[:7] or word[0:7]      #It will return ‘amazing’
+
+word[0:] or word[0:7]      #It will return ‘amazing’
+String Functions
+Some of the most used functions to perform operations on or manipulate strings are:
+
+len() function : It returns the length of the string.
+len(‘harry’)               #Returns 5
+endswith(“rry”) : This function tells whether the variable string ends with the string “rry” or not. If string is “harry”, it returns for “rry” since harry ends with rry.
+count(“c”) : It counts the total number of occurrences of any character.
+capitalize() : This function capitalizes the first character of a given string.
+find(word) : This function finds a word and returns the index of first occurrence of that word in the string.
+replace(oldword, newword) : This function replaces the old word with the new word in the entire string.
+Escape Sequence Characters:
+Sequence of characters after backslash ‘\’ [Escape Sequence Characters]
+
+Escape Sequence Characters comprises of more than one character but represents one character when used within the string.
+
+Examples: \n (new line), \t (tab), \’ (single quote), \\ (backslash), etc.
+* Lists and Tuples
+Python Lists are containers to store a set of values of any data type.
+
+friends = [‘Apple’, ‘Akash’, ‘Rohan’, 7, False]
+The list can contain different types of elements such as int, float, string, Boolean, etc. Above list is a collection of different types of elements.
+
+List Indexing
+A list can be index just like a string.
+
+L1 = [7, 9, ‘harry’]
+
+L1[0] – 7
+
+L1[1] – 9
+
+L1[70] – Error
+
+L1[0:2] – [7,9]         (This is known as List Slicing)
+List Methods
+Consider the following list:
+
+L1 = [1, 8, 7, 2, 21, 15]
+sort() – updates the list to [1,2,7,8,15,21]
+reverse() – updates the list to [15,21,2,7,8,1]
+append(8) – adds 8 at the end of the list
+insert(3,8) – This will add 8 at 3 index
+pop(2) – It will delete the element at index 2 and return its value
+remove(21) – It will remove 21 from the last
+
+Tuples in Python:
+A tuple is an immutable (can’t change or modified) data type in Python.
+
+a = ()              #It is an example of empty tuple
+
+a = (1,)           #Tuple with only one element needs a comma
+
+a = (1, 7, 2)   #Tuple with more than one element
+Once defined, tuple elements can’t be manipulated or altered.
+
+Tuple methods:
+
+Consider the following tuple,
+
+a = (1, 7, 2)
+count(1) – It will return the number of times 1 occurs in a.
+index(1) – It will return the index of the first occurrence of 1 in a.
+Chapter 4 – Practice Set
+Write a program to store seven fruits in a list entered by the user.
+Write a program to accept the marks of 6 students and display them in a sorted manner.
+Check that a tuple cannot be changed in Python.
+Write a program to sum a list with 4 numbers.
+Write a program to count the number of zeros in the following tuple:
+a = (7, 0, 8, 0, 0, 9)
+
+Chapter 5 – Dictionary and Sets
+Dictionary is a collection of key-value pairs.
+
+Syntax:
+
+''' a = {“ke”: “value”,
+“harry”: “code”,
+“marks” : “100”,
+“list”: [1,2,9]}
+a[“key”]	# Prints value
+a[“list”] 	# Prints [1,2,9] '''
+Properties of Python Dictionaries
+It is unordered
+It is mutable
+It is indexed
+It cannot contain duplicate keys
+Dictionary Methods
+Consider the following dictionary,
+
+a = {“name”: “Harry”,
+	“from”: “India”,
+	“marks”: [92,98,96]}
+items() : returns a list of (key,value) tuple.
+keys() : returns a list containing dictionary’s keys.
+update({“friend”: “Sam”}) : updates the dictionary with supplied key-value pairs.
+get(“name”) : returns the value of the specified keys (and value is returned e.g., “Harry” is returned here)
+More methods are available on docs.python.org
+
+
+Sets in Python
+Set is a collection of non-repetitive elements.
+
+S= Set()          # No repetition allowed!
+
+S.add(1)
+
+S.add(2)
+
+# or Set = {1,2}
+If you are a programming beginner without much knowledge of mathematical operations on sets, you can simply look at sets in python as data types containing unique values.
+
+Properties of Sets
+Sets are unordered # Elements order doesn’t matter
+Sets are unindexed # Cannot access elements by index
+There is no way to change items in sets
+Sets cannot contain duplicate values
+Operations on Sets
+Consider the following set:
+
+S = {1,8,2,3}
+Len(s) : Returns 4, the length of the set
+remove(8) : Updates the set S and removes 8 from S
+pop() : Removes an arbitrary element from the set and returns the element removed.
+clear() : Empties the set S
+union({8, 11}) : Returns a new set with all items from both sets. #{1,8,2,3,11}
+intersection({8, 11}) : Returns a set which contains only items in both sets. #{8}
+
+
+problem:
+Can you change the values inside a list which is contained in set S
+S = {8, 7, 12,[1, 2]}
+
+Chapter 6 – Conditional Expressions
+Sometimes we want to play pubg on our phone if the day is Sunday.
+
+Sometimes we order Ice-cream online if the day is sunny.
+
+Sometimes we go hiking if our parents allow.
+
+All these are decisions that depend on the condition being met.
+
+In python programming too, we must be able to execute instructions on a condition(s) being met. This is what conditions are for!
+
+If else and elif in Python
+If else and elif statements are a multiway decision taken by our program due to certain conditions in our code.
+
+Syntax:
+
+'''
+if (condition1):		// if condition 1 is true
+	print(“yes”)
+elif (condition2):		// if condition 2 is true
+	print(“No”)
+else:				// otherwise
+	print(“May be”)
+'''
+Code example:
+
+a = 22
+if (a>9):
+    print(“Greater”)
+else:
+    print(“lesser”)
+Quick Quiz: Write a program to print yes when the age entered by the user is greater than or equal to 18.
+
+
+Relational Operators
+Relational operators are used to evaluate conditions inside if statements. Some examples of relational operators are:
+
+= = -> equals
+
+>=  -> greater than/equal to
+
+<=, etc.
+Logical Operators
+In python, logical operators operate on conditional statements. Example:
+
+and -> true if both operands are true else false
+
+or -> true if at least one operand is true else false
+
+not -> inverts true to false and false to true
+elif clause
+elif in python means [else if]. If statement can be chained together with a lot of these elif statements followed by an else statement.
+
+'''
+if (condition1):
+    #code
+elif (condition 2):
+    #code
+elif (condition 2):
+    #code
+….
+else:
+    #code    '''
+The above ladder will stop once a condition in an if or elif is met.
+Important Notes:
+
+There can be any number of elif statements.
+Last else is executed only if all the conditions inside elifs fail.
+
+* Loops in Python
+Sometimes we want to repeat a set of statements in our program. For instance: Print 1 to 1000
+
+Loops make it easy for a programmer to tell the computer, which set of instructions to repeat, and how!
+
+Types of loops in Python
+Primarily there are two types of loops in Python
+
+While loop
+For loop
+We will look into this one by one!
+
+While loop
+
+The syntax of a while loop looks like this:
+
+''' while condition:
+    #Body of the loop '''
+The block keeps executing until the condition is true/false
+In while loops, the condition is checked first. If it evaluates to true, the body of the loop is executed, otherwise not!
+
+If the loop is entered, the process of condition check and execution is continued until the condition becomes false.
+
+Quick Quiz: Write a program to print 1 to 50 using a while loop.
+
+An Example:
+
+i = 0
+while i<5:
+    print(“Harry”)
+    i = i+1
+(Above program will print Harry 5 times)
+
+Note: if the condition never becomes false, the loop keeps getting executed.
+
+
+Quick Quiz: Write a program to print the content of a list using while loops.
+
+For loop
+A for loop is used to iterate through a sequence like a list, tuple, or string (iterables)
+
+The syntax of a for loop looks like this:
+
+l = [1, 7, 8]
+for item in l:
+	print(item)
+(Above program will print 1, 7, and 8)
+
+Range function in Python
+The range function in python is used to generate a sequence of numbers.
+
+We can also specify the start, stop, and step-size as follows:
+
+            range(start, stop, step_size)
+
+step size is usually not used with range()
+An example demonstrating range() function
+
+for i in range(0, 7):		#range(7) can also be used
+	print(i)		#prints 0 to 6
+For loop with else
+An optional else can be used with a for loop if the code is to be executed when the loop exhausts.
+
+Example:
+
+l = [1, 7, 8]
+for item in l:
+	print(item)
+else:
+	print(“Done”)	#This is printed when the loop exhausts!
+Output:
+
+1
+
+7
+
+8
+
+Done
+The break statement
+‘break’ is used to come out of the loop when encountered. It instructs the program to – Exit the loop now.
+
+Example:
+
+for i in range(0, 80):
+	print(i)	#This will print 0, 1, 2 and 3
+	if i == 3:
+		break
+The continue statement
+‘continue’ is used to stop the current iteration of the loop and continue with the next one. It instructs the program to “skip this iteration.”
+
+Example:
+
+for i in range(4):
+	print(“printing”)
+	if i == 2:	#if i is 2, the iteration is skipped
+		continue
+	print(i)
+
+pass statement
+pass is a null statement in python. It instructs to “Do nothing.”
+
+Example:
+
+l = [1, 7, 8]
+for item in l:
+	pass		
+#without pass, the program will throw an error
+
+Write a program to print the following star pattern.
+    *
+
+  ***  
+
+***** for n=3
+Write a program to print the following star pattern:
+*
+
+**
+
+*** for n = 3
+Write a program to print the following star pattern:
+* * *
+*   *             #For n=3
+* * * 
+   10. Write a program to print the multiplication table of n using for loop in reversed order.
+
+
+Chapter 8 – Functions and Recursions
+A function is a group of statements performing a specific task.
+
+When a program gets bigger in size and its complexity grows, it gets difficult for a programmer to keep track of which piece of code is doing what!
+
+A function can be reused by the programmer in a given program any number of times.
+
+Example and Syntax of a function
+
+The syntax of a function looks as follows:
+
+def func1():
+	print(“Hello”)
+This function can be called any number of times, anywhere in the program.
+
+Function call
+
+Whenever we want to call a function, we put the name of the function followed by parenthesis as follows:
+
+func1()          #This is called function call
+Function definition
+
+The part containing the exact set of instructions that are executed during the function call.
+
+Quick Quiz: Write a program to greet a user with “Good day” using functions.
+
+Types of functions in Python
+There are two types of functions in Python:
+
+Built-in functions #Already present in Python
+User-defined functions #Defined by the user
+Examples of built-in function includes len(), print(), range(), etc.
+
+The func1() function we defined is an example of a user-defined function.
+
+Functions with arguments
+
+A function can accept some values it can work with. We can put these values in the parenthesis. A function can also return values as shown below:
+
+def greet(name):
+	gr = “Hello” + name
+	return gr
+a = greet(“Harry”) #“Harry” is passed to greet in name
+
+# a will now contain “Hello Harry”
+
+Default Parameter Value
+
+We can have a value as the default argument in a function.
+
+If we specify name = “stranger” in the line containing def, this value is used when no argument is passed.
+
+For Example:
+
+def greet(name=’stranger’):
+	#function body
+greet()                       #Name will be ‘stranger’ in function body(default)
+
+greet(“Harry”)        #Name will be “Harry” in function body(passed)
+Recursion
+Recursion is a function which calls itself.
+
+It is used to directly use a mathematical formula as a function. For example:
+
+factorial(n) = n * factorial(n-1)
+This function can be defined as follows:
+
+def factorial(n):
+	if i == 0 or i == 1 : #Base condition which doesn’t call the function any further
+		return i
+	else:
+		return n*factorial(n-1) #Function calling itself
+This works as follows:
+
+
+
+The programmer needs to be extremely careful while working with recursion to ensure that the function doesn’t infinitely keep calling itself.
+
+Recursion is sometimes the most direct way to code an algorithm.
+
